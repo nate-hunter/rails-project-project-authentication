@@ -1,0 +1,26 @@
+<h1>Editing User</h1>
+
+<%# render 'form', user: @user %>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>
+
+
+<h3>Update <%= @user.name %>'s Profile</h3>
+
+<ul>
+<%= form_for @user do |f| %>
+  <li>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </li>
+
+
+  <li>
+    <%= f.label :img_url %>
+    <%= f.text_field :img_url %>
+  </li>
+
+  <%= f.submit %>
+<% end %>
+</ul>
